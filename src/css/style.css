@@ -1,0 +1,93 @@
+body {
+  background: url(../images/bg-repeat.jpg);
+  background-repeat: repeat-x;
+  background-size: 8vh;
+}
+
+main {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.info {
+  color: white;
+}
+.info h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.info p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 18px;
+  width: 300px;
+}
+
+.form {
+  background-color: white;
+  width: 340px;
+  height: 380px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.form .data {
+  margin-top: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 35px;
+}
+.form .data:first-child {
+  margin-top: 0px;
+}
+.form .message {
+  resize: none;
+  height: 100px;
+}
+.form .data::placeholder {
+  font-weight: 700;
+}
+.form .information {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form .submit {
+  background-color: #3ccc87;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  transition: 0.1s ease-in;
+}
+.form .submit:hover {
+  transform: scale(1.05);
+  background-color: #3ccc73;
+  cursor: pointer;
+}
+
+.form .red {
+  border-color: #f52e2e;
+}
+.form .green {
+  border-color: #00c22b;
+}
+.form .warning {
+  opacity: 0;
+  color: #f52e2e;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.warning.show {
+  opacity: 1;
+}
